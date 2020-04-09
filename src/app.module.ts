@@ -14,10 +14,13 @@ import {ArtistListService} from './service/artist-list/artist-list.service';
 import {DatabaseModule} from './modules/database/database.module';
 import {TypeOrmModule} from "@nestjs/typeorm";
 import {AlbumEntity} from "./model/album-entity";
+import {ConfigModule} from "nestjs-config";
+import * as path from "path";
 
 @Module({
     imports: [DatabaseModule,
-      TypeOrmModule.forFeature([AlbumEntity])
+        TypeOrmModule.forFeature([AlbumEntity]),
+        ConfigModule.load(path.resolve(__dirname, 'config', '**/!(*.d).{ts,js}')),
     ],
     controllers: [AppController, AlbumController, ArtistController],
     providers: [AppService, AlbumCreateService, AlbumReadService, AlbumUpdateService, AlbumDeleteService, AlbumListService, ArtistCreateService, ArtistDeleteService, ArtistListService],
