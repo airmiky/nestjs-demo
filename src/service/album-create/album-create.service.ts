@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import {AlbumDto} from "../../dto/album-dto";
+import {AlbumDto} from "../../dto/album.dto";
 import {Album} from "../../model/album.interface";
 import {InjectRepository} from "@nestjs/typeorm";
 import {AlbumEntity} from "../../model/album-entity";
