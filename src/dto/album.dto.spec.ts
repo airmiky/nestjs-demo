@@ -1,4 +1,4 @@
-import { AlbumDto } from './album-dto';
+import { AlbumDto } from './album.dto';
 
 describe('AlbumDto', () => {
   it('should be defined', () => {

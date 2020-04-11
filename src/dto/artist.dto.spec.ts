@@ -1,4 +1,4 @@
-import { ArtistDto } from './artist-dto';
+import { ArtistDto } from './artist.dto';
 
 describe('ArtistDto', () => {
   it('should be defined', () => {
